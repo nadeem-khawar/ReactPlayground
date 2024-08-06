@@ -1,4 +1,7 @@
 import { useEffect, useState } from 'react';
+import { Button } from '../components/button';
+import Geolocation from '../components/hooks/Geolocation';
+import IssuesContainer from '../components/hooks/GithubIssues';
 
 export default function EffectHookPage() {
     const [count, setCount] = useState(0);
@@ -8,11 +11,19 @@ export default function EffectHookPage() {
         document.title = `Count: ${count}`;
     }, [count]);
     return (
-        <div id="effect-hook">
-            <h1>Effect Hook</h1>
-            <p>Count: {count}</p>
-            <button onClick={increment}>Increment</button>
-            <button onClick={decrement}>Decrement</button>
-        </div>
+        <>
+            <div id="effect-hook">
+                <h1>Effect Hook</h1>
+                <p>Count: {count}</p>
+                <Button onClick={increment}>Increment</Button>
+                <Button onClick={decrement}>Decrement</Button>
+            </div>
+            <div id="geolocation">
+                <Geolocation></Geolocation>
+            </div>
+            <div id="issues">
+                <IssuesContainer></IssuesContainer>
+            </div>
+        </>
     );
 }
