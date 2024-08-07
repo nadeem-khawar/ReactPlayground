@@ -1,5 +1,5 @@
 import { FC, useState } from 'react';
-import { Button } from '../button';
+import { Button } from '../catalyst/button';
 type operation = 'increment' | 'decrement';
 const CounterContainer = () => {
     const [count, setCount] = useState<number>(0);
@@ -9,6 +9,7 @@ const CounterContainer = () => {
         } else {
             setCount(count - 1);
         }
+        console.log('Count:', count);
     };
     return (
         <div>

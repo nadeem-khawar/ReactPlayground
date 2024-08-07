@@ -7,6 +7,8 @@ import Root from './routes/root';
 import ErrorPage from './error-page';
 import StateHookPage from './routes/statehook';
 import EffectHookPage from './routes/effecthook';
+import AnimalShow from './routes/animalshow';
+import LiftStatePage from './routes/LiftStatePage';
 
 const browserRouter = createBrowserRouter([
     {
@@ -21,6 +23,14 @@ const browserRouter = createBrowserRouter([
             {
                 path: '/effecthook',
                 element: <EffectHookPage />,
+            },
+            {
+                path: '/animal-show',
+                element: <AnimalShow />,
+            },
+            {
+                path: '/lift-state',
+                element: <LiftStatePage />,
             },
         ],
     },

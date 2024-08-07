@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Button } from '../components/button';
+import { Button } from '../components/catalyst/button';
 import Geolocation from '../components/hooks/Geolocation';
 import IssuesContainer from '../components/hooks/GithubIssues';
 
